@@ -1,0 +1,36 @@
+<div style="text-align: center;">
+	<a class="button hvr-hollow" onclick="document.getElementById('id02').style.display='block'">Login</a>
+</div>
+
+<div id="id02" class="modal">
+ 	<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+    <form class="modal-content animate" method="post" action="cust_home.php">
+    		<div class="container">
+			<label><b>Email</b></label>
+			<input type="text" placeholder="Enter Email" name="email2" value="<?PHP print $email;?>" required>
+
+			<label><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw2" required>
+
+			<input type="checkbox" checked="checked"> <label style="color: black">Remember Me </label>
+
+ 			<div class="clearfix">
+ 			<button style="background-color:#3b5998; width:25%;" onclick="facebookLogin()">Facebook</button>
+ 			<br/>
+ 			<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+ 			<button type="submit" class="signupbtn">Login</button>
+ 		</div>
+ 	</form>
+ </div>
+ 
+			<script>
+  			// Get the modal
+                var modal = document.getElementById('id02');
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
